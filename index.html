@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Star Fish </title>
+  <!-- Link for the icon -->
+
+  <link rel="icon" href="images/New folder/laddu.webp">
+  <!-- Google Fonts API -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Asap+Condensed&family=Jost&family=Kanit&family=Noto+Sans+Display:wght@600&family=PT+Sans+Narrow&family=Slabo+27px&family=Ubuntu:wght@500&display=swap');
+  </style>
+  <!-- for second font "dancing Script" -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Asap+Condensed&family=Dancing+Script&family=Jost&family=Kanit&family=Noto+Sans+Display:wght@600&family=PT+Sans+Narrow&family=Slabo+27px&family=Ubuntu:wght@500&display=swap');
+  </style>
+
+  <!-- BootStrap Link  CSS-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- customised CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Main Container -->
+  <div class="container-main">
+    <!-- for menu section -->
+    <div class="menu">
+      <h2 class="logo">StarFish</h2>
+      <!-- code for navbarIcon  -->
+      <div class="navButtons">
+        <i class="fa-solid fa-xmark " id="closeNavs"></i>
+        <i class="fa-solid fa-burger" id="openNavs"></i>
+      </div>
+      <!-- for nav-links PRIMARY specifically designed to show only on the mobile screens -->
+      <div class="nav-links">
+        <ul>
+          <li><a href="#home" class="Active-Link nav-1">Home</a></li>
+          <li><a href="#menu" class="nav-2">Menu</a></li>
+          <li><a href="#about" class="nav-3">About</a></li>
+          <li><a href="#bookTable" class="nav-4">Book Table</a></li>
+          <li><a href='/accoutnlogin'><i class="fa-solid fa-user-plus" id="registerAccount"></i></a></li>
+        </ul>
+      </div>
+      <!-- For Nav-Links SECONDARY specifically designed to show on the desktop or Large Screens only-->
+      <div class="nav-linksSecondary">
+        <ul>
+          <li><a href="#home" class="Active-Link nav-1">Home</a></li>
+          <li><a href="#menu" class="nav-2">Menu</a></li>
+          <li><a href="#about" class="nav-3">About</a></li>
+          <li><a href="#bookTable" class="nav-4">Book Table</a></li>
+          <li><a href='/accoutnlogin' target='_blank'><i class="fa-solid fa-user-plus" id="registerAccount"></i></a>
+            <!-- <p class="userNameContainer" style="position: relative; left: -15px; top: 5px;"></p> -->
+          </li>
+        </ul>
+      </div>
+      <!-- For Nav-Links Secondary -->
+    </div>
+    <!-- Home Section -->
+    <section id="home">
+      <div class="imageContainerBg">
+        <img src="images/New folder/ZA0304H_saag-paneer-spinach.jpg"" class="backgroundImg">
+      </div>
+      <!-- carousel -->
+      <div class="carouselContainer">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1" id="carouselButtonHome"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"
+              id="carouselButtonHome"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"
+              id="carouselButtonHome"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <h2> Star-Fish <br> Fast Food Restaurant</h2>
+              <p>
+                WELCOME.... Explore the beauty and serene arena of our reataurant.. <br> We offer the best sales and
+                affordable foods in Nigeria.
+                This is a place to call your home. <br> As a Nigerian based reaturant, we are happy to let you taste the
+                sweet aroma of our food.
+              </p>
+              <button class="orderBtn" onclick="MessageToIndividual()">
+                Order Online
+              </button>
+            </div>
+            <div class="carousel-item">
+              <h2>La Hot <br> Fast Food Restaurant</h2>
+              <p>
+                WELCOME.... Explore the beauty and serene arena of our reataurant.. <br> We offer the best sales and
+                affordable foods in Nigeria.
+                This is a place to call your home. <br> As a Nigerian based reaturant, we are happy to let you taste the
+                sweet aroma of our food.
+              </p>
+              <button class="orderBtn" onclick="MessageToIndividual()">
+                Order Online
+              </button>
+            </div>
+            <div class="carousel-item">
+              <h2>La Hot <br> Fast Food Restaurant</h2>
+              <p>
+                WELCOME.... Explore the beauty and serene arena of our reataurant.. <br> We offer the best sales and
+                affordable foods in Nigeria.
+                This is a place to call your home. <br> As a Nigerian based reaturant, we are happy to let you taste the
+                sweet aroma of our food.
+              </p>
+              <button class="orderBtn" onclick="MessageToIndividual()">
+                Order Online
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Menu Section -->
+
+    <section id="menu">
+      <h2 class="titleHeadre">Our Menu</h2>
+      <div class="foodsContent">
+        <button id="forAllFoods">All</button>
+        <button id="EgusiBtn">Egusi Soup</button>
+        <button id="OkroBtn">Okro Soup</button>
+        <button id="AmalaBtn">Amala & Ewedu Meal</button>
+        <button id="MeatPieBtn">Meat Pie</button>
+        <button id="FRiedRiceBtn">Fried Rice</button>
+        <button id="EggSauceBtn">Egg Sauce</button>
+
+      </div>
+      <div class="foodNames">
+        <!-- for all the foods container -->
+        <!-- This container contains all the availabel foods -->
+        <div class="AllFoods">
+          <div class="cardsforFood">
+            <div class="foodcard1">
+              <div class="cardup">
+                <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSREAi8wo-e49nUoJAfeCvl6aEnoN_3m_xu4A&usqp=CAU   " alt="">
+              </div>
+              <div class="cardDown">
+                <h3>Delicious Fried Rice</h3>
+                <p>Dont miss the blessed taste of our Fried Rice <br> A food you are not going to compare with
+                  another</p>
+                <div class="inner">
+                  <i class="fa-solid fa-naira-sign">rs 400</i>
+                  <i class="fa-solid fa-cart-plus"></i>
+                </div>
+              </div>
+            </div>
+            <!-- food 2 -->
+            <div class="foodcard2">
+              <div class="cardup">
+                <img src="  https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcAv3zyJDdt4qKJG3JL0rrJl0veJ3sP3gCFQ&usqp=CAU   " alt="">
+              </div>
+              <div class="cardDown">
+                <h3>Delicious Okro Soup</h3>
+                <p>Dont miss the blessed taste of our Okro<br> A food you are not going to compare with another</p>
+                <div class="inner">
+                  <i class="fa-solid fa-naira-sign">rs 300</i>
+                  <i class="fa-solid fa-cart-plus"></i>
+                </div>
+              </div>
+            </div>
+            <!-- food 3 -->
+            <div class="foodcard3">
+              <div class="cardup">
+                <img src="   https://img.lovepik.com/free-png/20211107/lovepik-hu-spicy-soup-cuisine-png-image_400464133_wh1200.png    " alt="">
+              </div>
+              <div class="cardDown">
+                <h3>Delicious Egusi Soup</h3>
+                <p>Dont miss the blessed taste of our Egusi Soup <br> A food you are not going to compare with another
+                </p>
+                <div class="inner">
+                  <i class="fa-solid fa-naira-sign">rs 500</i>
+                  <i class="fa-solid fa-cart-plus"></i>
+                </div>
+              </div>
+            </div>
+            <!-- food 4 -->
+            <div class="foodcard4">
+              <div class="cardup">
+                <img src="  https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqhMKfuoH7J14C0v491WJ0sNPJSWIFLUsl8w&usqp=CAU    " alt="">
+              </div>
+              <div class="cardDown">
+                <h3>Delicious Egg recipe</h3>
+                <p>Dont miss the blessed taste of our Egusi Soup <br> A food you are not going to compare with another
+                </p>
+                <div class="inner">
+                  <i class="fa-solid fa-naira-sign">rs 500</i>
+                  <i class="fa-solid fa-cart-plus"></i>
+                </div>
+              </div>
+            </div>
+            <!-- food 5 -->
+            <div class="foodcard5">
+              <div class="cardup">
+                <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRNQth5pmXNBNi19I8axwiciX0l_gop1eZoQ&usqp=CAU    " alt="">
+              </div>
+              <div class="cardDown">
+                <h3>Delicious Egg Parath</h3>
+                <p>Dont miss the blessed taste of our Egg Sauce <br> A food you are not going to compare with another
+                </p>
+                <div class="inner">
+                  <i class="fa-solid fa-naira-sign">rs 200</i>
+                  <i class="fa-solid fa-cart-plus"></i>
+                </div>
+              </div>
+            </div>
+            <!-- food 6 -->
+            <div class="foodcard7">
+              <div class="cardup">
+                <img src="   data:image/jpeg;base64,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   " alt="">
+              </div>
+              <div class="cardDown">
+                <h3>Delicious fish</h3>
+                <p>Dont miss the blessed taste of our Egg Sauce <br> A food you are not going to compare with another
+                </p>
+                <div class="inner">
+                  <i class="fa-solid fa-naira-sign">rs  1000</i>
+                  <i class="fa-solid fa-cart-plus"></i>
+                </div>
+              </div>
+            </div>
+            <!-- food 7 -->
+            <div class="foodcard7">
+              <div class="cardup">
+                <img src="  data:image/jpeg;base64,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     " alt="">
+              </div>
+              <div class="cardDown">
+                <h3>Delicious Meat Pie</h3>
+                <p>Dont miss the blessed taste of our Meat Pie <br> A food you are not going to compare with another</p>
+                <div class="inner">
+                  <i class="fa-solid fa-naira-sign">1, 950</i>
+                  <i class="fa-solid fa-cart-plus"></i>
+                </div>
+              </div>
+            </div>
+            <!-- food 8 -->
+            <div class="foodcard8">
+              <div class="cardup">
+                <img src="   https://www.licious.in/blog/wp-content/uploads/2022/05/shutterstock_1587847900.jpg   " alt="">
+              </div>
+              <div class="cardDown">
+                <h3>Delicious Dry Meat</h3>
+                <p>Dont miss the blessed taste of our Dry Meat <br> A food you are not going to compare with another</p>
+                <div class="inner">
+                  <i class="fa-solid fa-naira-sign"> rs400</i>
+                  <i class="fa-solid fa-cart-plus"></i>
+                </div>
+              </div>
+            </div>
+            <!-- food card 9 -->
+            <div class="foodcard9">
+              <div class="cardup">
+                <img src="  data:image/jpeg;base64,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   " alt="">
+              </div>
+              <div class="cardDown">
+                <h3>Delicious Chicken Jollof Rice</h3>
+                <p>Dont miss the blessed taste of our Chicken Jollof Rice <br> A food you are not going to compare with
+                  another</p>
+                <div class="inner">
+                  <i class="fa-solid fa-naira-sign">rs 1300</i>
+                  <i class="fa-solid fa-cart-plus"></i>
+                </div>
+              </div>
+            </div>
+            <!-- food card 10 -->
+            <div class="foodcard10">
+              <div class="cardup">
+                <img src="images/New folder/idali sambhar 2.png" alt="">
+              </div>
+              <div class="cardDown">
+                <h3>Delicious idli Sambhar</h3>
+                <p>Dont miss the blessed taste of our Macaroni Pasta <br> A food you are not going to compare with
+                  another</p>
+                <div class="inner">
+                  <i class="fa-solid fa-naira-sign"> rs700</i>
+                  <i class="fa-solid fa-cart-plus"></i>
+                </div>
+              </div>
+            </div>
+            <!-- food card 11 -->
+            <div class="foodcard11">
+              <div class="cardup">
+                <img src="images/New folder/images idali 1.jpeg" alt="">
+              </div>
+              <div class="cardDown">
+                <h3>Delicious idli</h3>
+                <p>Dont miss the blessed taste of our Chicken Okro Soup <br> A food you are not going to compare with
+                  another</p>
+                <div class="inner">
+                  <i class="fa-solid fa-naira-sign"> rs700</i>
+                  <i class="fa-solid fa-cart-plus"></i>
+                </div>
+              </div>
+            </div>
+            <!-- food card 12 -->
+            <div class="foodcard12">
+              <div class="cardup">
+                <img src="images/New folder/Marathi thali 1.avif" alt="">
+              </div>
+              <div class="cardDown">
+                <h3>Delicious Maratha Thali</h3>
+                <p>Dont miss the blessed taste of our Amala & Ewedu Soup <br> A food you are not going to compare with
+                  another</p>
+                <div class="inner">
+                  <i class="fa-solid fa-naira-sign"> rs700</i>
+                  <i class="fa-solid fa-cart-plus"></i>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- container for Egusi Soup -->
+        <div class="EgusiSoupSection">
+          <div class="Egusi1">
+            <div class="cardupEgusi">
+              <img src="images//egusi 3.png" alt="">
+            </div>
+            <div class="cardDownEgusi">
+              <h3>Delicious Naija Egusi Soup</h3>
+              <p>Dont miss the blessed taste of our Egusi Soup <br> A food you are not going to compare with another</p>
+              <div class="inner">
+                <i class="fa-solid fa-naira-sign"> rs500</i>
+                <i class="fa-solid fa-cart-plus"></i>
+              </div>
+            </div>
+          </div>
+          <!-- For the second soup -->
+          <div class="Egusi2">
+            <div class="cardupEgusi">
+              <img src="images/egusi 1.png" alt="">
+            </div>
+            <div class="cardDownEgusi">
+              <h3>Delicious Naija Egusi Soup</h3>
+              <p>Dont miss the blessed taste of our Egusi Soup <br> A food you are not going to compare with another</p>
+              <div class="inner">
+                <i class="fa-solid fa-naira-sign"> rs 500</i>
+                <i class="fa-solid fa-cart-plus"></i>
+              </div>
+            </div>
+          </div>
+          <!-- for thr third Egusi -->
+          <div class="Egusi3">
+            <div class="cardupEgusi">
+              <img src="images/egusi 2.png" alt="">
+            </div>
+            <div class="cardDownEgusi">
+              <h3>Delicious Naija Egusi Soup</h3>
+              <p>Dont miss the blessed taste of our Egusi Soup <br> A food you are not going to compare with another</p>
+              <div class="inner">
+                <i class="fa-solid fa-naira-sign"> rs500</i>
+                <i class="fa-solid fa-cart-plus"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Container for Okro Soup -->
+
+        <div class="okroSoupSection">
+          <div class="Okro1">
+            <div class="cardupOkro">
+              <img src="images/okro soup 5.png" alt="">
+            </div>
+            <div class="cardDownOkro">
+              <h3>Delicious Naija Okro Soup</h3>
+              <p>Dont miss the blessed taste of our Okro Soup <br> A food you are not going to compare with another</p>
+              <div class="inner">
+                <i class="fa-solid fa-naira-sign"> rs700</i>
+                <i class="fa-solid fa-cart-plus"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- for the second okro soup -->
+          <div class="Okro2">
+            <div class="cardupOkro">
+              <img src="images/okro soup 2.png" alt="">
+            </div>
+            <div class="cardDownOkro">
+              <h3>Delicious Naija Okro Soup</h3>
+              <p>Dont miss the blessed taste of our Okro Soup <br> A food you are not going to compare with another</p>
+              <div class="inner">
+                <i class="fa-solid fa-naira-sign"> rs500</i>
+                <i class="fa-solid fa-cart-plus"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- for the third okro soup -->
+          <div class="Okro3">
+            <div class="cardupOkro">
+              <img src="images/okro soup 1.png" alt="">
+            </div>
+            <div class="cardDownOkro">
+              <h3>Delicious Naija Okro Soup</h3>
+              <p>Dont miss the blessed taste of our Okro Soup <br> A food you are not going to compare with another</p>
+              <div class="inner">
+                <i class="fa-solid fa-naira-sign">rs300</i>
+                <i class="fa-solid fa-cart-plus"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- for the 4th Okro Soup -->
+          <div class="Okro4">
+            <div class="cardupOkro">
+              <img src="images/okro soup main.png" alt="">
+            </div>
+            <div class="cardDownOkro">
+              <h3>Delicious Naija Okro Soup</h3>
+              <p>Dont miss the blessed taste of our Okro Soup <br> A food you are not going to compare with another</p>
+              <div class="inner">
+                <i class="fa-solid fa-naira-sign">rs 200</i>
+                <i class="fa-solid fa-cart-plus"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Container for Amala & Ewedu Food Section -->
+        <div class="AmalaFoodsSection">
+          <div class="Amala1">
+            <div class="cardupAmala">
+              <img src="images/amala and ewedu 2.png" alt="">
+            </div>
+            <div class="cardDownAmala">
+              <h3>Delicious Naija Amala & Ewedu Meal</h3>
+              <p>Dont miss the blessed taste of our Amala & Ewedu Meal <br> A food you are not going to compare with
+                another</p>
+              <div class="inner">
+                <i class="fa-solid fa-naira-sign">rs 200</i>
+                <i class="fa-solid fa-cart-plus"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- For the 2nd Amala & Ewedu Food -->
+          <div class="Amala2">
+            <div class="cardupAmala">
+              <img src="images/amala and ewedu 1.png" alt="">
+            </div>
+            <div class="cardDownAmala">
+              <h3>Delicious Naija Amala & Ewedu Meal</h3>
+              <p>Dont miss the blessed taste of our Amala & Ewedu Meal <br> A food you are not going to compare with
+                another</p>
+              <div class="inner">
+                <i class="fa-solid fa-naira-sign">rs 500</i>
+                <i class="fa-solid fa-cart-plus"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Container for Meat Pie Section -->
+        <div class="MeatPieFoods">
+          <div class="MeatPie1">
+            <div class="cardupMeatPie">
+              <img src="images//meat pie 3.png" alt="">
+            </div>
+            <div class="cardDowMeatPie">
+              <h3>Delicious Naija Meat Pie</h3>
+              <p>Dont miss the blessed taste of our Meat Pie <br> A food you are not going to compare with
+                another</p>
+              <div class="inner">
+                <i class="fa-solid fa-naira-sign"> rs950</i>
+                <i class="fa-solid fa-cart-plus"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- for the second Meat Pie -->
+          <div class="MeatPie2">
+            <div class="cardupMeatPie">
+              <img src="images//meat pie 1.png" alt="">
+            </div>
+            <div class="cardDowMeatPie">
+              <h3>Delicious Naija Meat Pie</h3>
+              <p>Dont miss the blessed taste of our Meat Pie <br> A food you are not going to compare with
+                another</p>
+              <div class="inner">
+                <i class="fa-solid fa-naira-sign"> rs950</i>
+                <i class="fa-solid fa-cart-plus"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- for the 3rd Meat Pie  -->
+          <div class="MeatPie3">
+            <div class="cardupMeatPie">
+              <img src="images//meat pie 2.png" alt="">
+            </div>
+            <div class="cardDowMeatPie">
+              <h3>Delicious Naija Meat Pie</h3>
+              <p>Dont miss the blessed taste of our Meat Pie <br> A food you are not going to compare with
+                another</p>
+              <div class="inner">
+                <i class="fa-solid fa-naira-sign"> rs 950</i>
+                <i class="fa-solid fa-cart-plus"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Container for Fried Rice Section -->
+        <div class="friedRiceSection">
+          <div class="FriedRice1">
+            <div class="cardupFriedRice">
+              <img src="images/fried rice 1.png" alt="">
+            </div>
+            <div class="cardDowFriedRice">
+              <h3>Delicious Naija Fried Rice</h3>
+              <p>Dont miss the blessed taste of our Fried Rice <br> A food you are not going to compare with
+                another</p>
+              <div class="inner">
+                <i class="fa-solid fa-naira-sign" id="price1">2500</i>
+                <i class="fa-solid fa-cart-plus" id="calculateRice1"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- for the 2nd fried rice food -->
+          <div class="FriedRice2">
+            <div class="cardupFriedRice">
+              <img src="images/fried rice 2.png" alt="">
+            </div>
+            <div class="cardDowFriedRice">
+              <h3>Delicious Naija Fried Rice</h3>
+              <p>Dont miss the blessed taste of our Fried Rice <br> A food you are not going to compare with
+                another</p>
+              <div class="inner">
+                <i class="fa-solid fa-naira-sign" id="price2">2500</i>
+                <i class="fa-solid fa-cart-plus" id="calculateRice2"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- for the 3rd fried rice food -->
+          <div class="FriedRice3">
+            <div class="cardupFriedRice">
+              <img src="images/fried rice 3.png" alt="">
+            </div>
+            <div class="cardDowFriedRice">
+              <h3>Delicious Naija Fried Rice</h3>
+              <p>Dont miss the blessed taste of our Fried Rice <br> A food you are not going to compare with
+                another</p>
+              <div class="inner">
+                <i class="fa-solid fa-naira-sign" id="price3">2500</i>
+                <i class="fa-solid fa-cart-plus" id="calculateRice3"></i>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+        <!-- Container for Egg sauce -->
+
+        <div class="eggSauceContainer">
+          <div class="EggSauce1">
+            <div class="cardupEggSauce">
+              <img src="images/sauce bg egg.png" alt="">
+            </div>
+            <div class="cardDowEggSauce">
+              <h3>Delicious Naija Egg Sauce</h3>
+              <p>Dont miss the blessed taste of our Egg Sauce <br> A food you are not going to compare with
+                another</p>
+              <div class="inner">
+                <i class="fa-solid fa-naira-sign">5, 000</i>
+                <i class="fa-solid fa-cart-plus"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- for the 2nd egg sauce food -->
+          <div class="EggSauce2">
+            <div class="cardupEggSauce">
+              <img src="images/egg sauce 1.png" alt="">
+            </div>
+            <div class="cardDowEggSauce">
+              <h3>Delicious Naija Egg Sauce</h3>
+              <p>Dont miss the blessed taste of our Egg Sauce <br> A food you are not going to compare with
+                another</p>
+              <div class="inner">
+                <i class="fa-solid fa-naira-sign">5, 000</i>
+                <i class="fa-solid fa-cart-plus"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- for the 3rd Egg Suace -->
+          <div class="EggSauce3">
+            <div class="cardupEggSauce">
+              <img src="images/egg sauce 3.png" alt="">
+            </div>
+            <div class="cardDowEggSauce">
+              <h3>Delicious Naija Egg Sauce</h3>
+              <p>Dont miss the blessed taste of our Egg Sauce <br> A food you are not going to compare with
+                another</p>
+              <div class="inner">
+                <i class="fa-solid fa-naira-sign">5, 000</i>
+                <i class="fa-solid fa-cart-plus"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- for the 4th Egg Sauce -->
+          <div class="EggSauce4">
+            <div class="cardupEggSauce">
+              <img src="images/egg sauce 4.png" alt="">
+            </div>
+            <div class="cardDowEggSauce">
+              <h3>Delicious Naija Egg Sauce</h3>
+              <p>Dont miss the blessed taste of our Egg Sauce <br> A food you are not going to compare with
+                another</p>
+              <div class="inner">
+                <i class="fa-solid fa-naira-sign">5, 000</i>
+                <i class="fa-solid fa-cart-plus"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- for the 5th Egg Sauce -->
+          <div class="EggSauce5">
+            <div class="cardupEggSauce">
+              <img src="images/egg sauce 5.png" alt="">
+            </div>
+            <div class="cardDowEggSauce">
+              <h3>Delicious Naija Egg Sauce</h3>
+              <p>Dont miss the blessed taste of our Egg Sauce <br> A food you are not going to compare with
+                another</p>
+              <div class="inner">
+                <i class="fa-solid fa-naira-sign">5, 000</i>
+                <i class="fa-solid fa-cart-plus"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <!-- for the about us Container -->
+      <div class="aboutContainerr">
+        <!-- container for the image on the about -->
+        <div class="aboutImg">
+          <img src="" alt="">
+        </div>
+        <!-- container for the About us Text -->
+        <div class="aboutText">
+          <h2 class="aboutHeader">We Are La-Hot</h2>
+          <p class="aboutInfoText">
+            "Welcome to Star-Fish Restaurant <strong>'Mumbai' best Restaurant'</strong> where culinary excellence meets a
+            warm and inviting atmosphere.
+            Discover a symphony of flavors, crafted with passion and precision, in a warm and inviting ambiance. From
+            delectable appetizers to
+            mouthwatering entrees and decadent desserts, our menu celebrates culinary excellence. Join us for a
+            memorable dining experience,
+            where every bite tells a story. Explore our menu, reserve your table, and savor the moment at Star-Fish
+            Restaurant.
+            Whether you're seeking a romantic dinner, a lively family gathering, or a memorable celebration, our
+            restaurant promises to delight your
+            senses and create lasting memories.
+            Our story began with a dream to provide a place where friends and family could gather over exceptional food
+            and drinks. We've carefully
+            curated a menu that blends traditional and
+            contemporary flavors, resulting in a dining experience that transcends the ordinary.
+            Join us for a gastronomic journey that combines impeccable service with a passion for exceptional food."
+
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Book A Table Section -->
+    <section id="bookTable">
+      <!-- bookingHeader -->
+      <h2 class="bookingHeader">Reserve A Table Now</h2>
+      <div class="formBookingTable">
+        <form action="mailto:lahotfastfood@gmail.com" method="post" autocomplete="on">
+          <!-- for name input field -->
+          <div class="nameFied">
+            <label for="YourName"></label>
+            <input type="text" id="YourName" placeholder="Your Name" autocomplete="name" autofocus autocapitalize="name"
+              required>
+          </div>
+          <!-- for phone number input field -->
+          <div class="numberFied">
+            <label for="YourNumber"></label>
+            <input type="tel" id="YourNumber" placeholder="Phone Number" autocomplete="mobile" maxlength="15" required>
+          </div>
+          <!-- for email input field -->
+          <div class="emailFied">
+            <label for="YourEmail"></label>
+            <input type="text" id="YourEmail" placeholder="Your Email" autocomplete="email" required>
+          </div>
+          <!-- For booking the number of persons fieled -->
+          <div class="tableNumberFieled">
+            <input list="book-now" placeholder="How Many People?" required />
+            <datalist id="book-now">
+              <option value="1"></option>
+              <option value="3"></option>
+              <option value="4"></option>
+              <option value="7"></option>
+              <option value="8"></option>
+              <option value="10"></option>
+            </datalist>
+          </div>
+          <!-- for the date of booking -->
+          <div class="bookingdateFieled">
+            <label for="dateOfBooking"></label>
+            <input type="datetime-local" id="dateOfBooking" required>
+          </div>
+          <!-- Booking Button -->
+          <button type="submit" id="BookingBtn">
+            Book Now
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- What Our Customer's say Section -->
+    <section id="customers">
+      <h2 class="customerHeader">See What Our Customer's Are Saying</h2>
+      <div class="customerContainer">
+        <!-- For the carousel cintainer -->
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1" id="hideCarousel"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"
+              id="hideCarousel"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"
+              id="hideCarousel"></button>
+          </div>
+          <div class="carousel-inner">
+            <!-- for the first carousel item -->
+            <div class="carousel-item active">
+              <div class="customerCommentsContainer">
+                <p class="customerMsg">
+                  "An evening at Star-fish is a sensory symphony of flavors, elegance, and hospitality. From the moment you
+                  step through the door, you're
+                  transported to a world of culinary delight. The menu is a culinary masterpiece,
+                  a carefully orchestrated fusion of innovation and tradition. <br>
+                  <i class="fa-solid fa-star fa-beat"></i><i class="fa-solid fa-star fa-beat"></i>
+                  <i class="fa-solid fa-star fa-beat"></i><i class="fa-solid fa-star fa-beat"></i>
+                  <i class="fa-solid fa-star fa-beat"></i>
+                <aside>
+                  <strong>JOSHI</strong> <br> <i class="fa-solid fa-location-dot fa-beat-fade"></i> pune
+                </aside>
+                </p>
+              </div>
+              <i class="fa-solid fa-caret-up"></i>
+              <img src="images/miracles image.jpg" alt="..." id="customerImg1">
+            </div>
+            <!-- for the 2nd carousel Item -->
+            <div class="carousel-item">
+              <div class="customerCommentsContainer2">
+                <p class="customerMsg">
+                  "An evening at Star-fish is a sensory symphony of flavors, elegance, and hospitality. From the moment you
+                  step through the door, you're
+                  transported to a world of culinary delight. The menu is a culinary masterpiece,
+                  a carefully orchestrated fusion of innovation and tradition. <br>
+                  <i class="fa-solid fa-star fa-beat"></i><i class="fa-solid fa-star fa-beat"></i>
+                  <i class="fa-solid fa-star fa-beat"></i><i class="fa-solid fa-star fa-beat"></i>
+                  <i class="fa-solid fa-star fa-beat"></i>
+                <aside>
+                  <strong>abhishek</strong> <br> <i class="fa-solid fa-location-dot fa-beat-fade"></i> Nagpur
+                </aside>
+                </p>
+              </div>
+              <i class="fa-solid fa-caret-up"></i>
+              <img src="images/mira2.jpg" alt="..." id="customerImg2">
+            </div>
+            <!-- for the 3rd carousel item -->
+            <div class="carousel-item">
+              <div class="customerCommentsContainer3">
+                <p class="customerMsg">
+                  "An evening at Star- FISH is a sensory symphony of flavors, elegance, and hospitality. From the moment you
+                  step through the door, you're
+                  transported to a world of culinary delight. The menu is a culinary masterpiece,
+                  a carefully orchestrated fusion of innovation and tradition. <br>
+                  <i class="fa-solid fa-star fa-beat"></i><i class="fa-solid fa-star fa-beat"></i>
+                  <i class="fa-solid fa-star fa-beat"></i><i class="fa-solid fa-star fa-beat"></i>
+                  <i class="fa-solid fa-star fa-beat"></i>
+                <aside>
+                  <strong>kunal</strong> <br> <i class="fa-solid fa-location-dot fa-beat-fade"></i> Mumbai
+                </aside>
+                </p>
+              </div>
+              <i class="fa-solid fa-caret-up"></i>
+              <img src="images/miracles image.jpg" alt="..." id="customerImg3">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Footer Section -->
+
+    <section id="Footer">
+      <!-- This Div is going to be divided in 3 sections -->
+      <!-- for the parent Footer-Outer container -->
+      <div class="parentFooter">
+        <!-- Container For Contact Us -->
+        <div class="contactUsContainer">
+          <h2 class="contactHeader">Let's Get In Touch</h2>
+          <!-- for location -->
+          <p>
+            <i class="fa-solid fa-location-dot"></i>
+            Mumbai, Maharashtra.
+          </p>
+          <!-- for phone contact -->
+          <p>
+            <i class="fa-solid fa-phone-volume fa-shake"></i>
+            <a href="tel:+2349056255572">+91- 9384998445</a>
+          </p>
+          <!-- for email contact -->
+          <p>
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:lahotfastfoodng@gmail.com">hotelstarfish@gmail.com</a>
+          </p>
+        </div>
+        <!-- Container For Retaurant Info -->
+        <div class="laHotContainer">
+          <h2 class="lahotHeadre">Star-Fish</h2>
+          <p class="lahotText">
+            "In the heart of Mumbai  culinary journey was born. <br>  Star - Fish, established in 2002, has a rich
+            history
+            of delighting palates <br> and creating cherished memories. <br> What began as a humble endeavor by
+            <br>
+            <strong>Get way of India</strong> <br> soon evolved into
+            a gastronomic destination renowned <br> for its commitment to quality and innovation."
+          </p>
+        </div>
+        <!-- Container for Opening Hours -->
+        <div class="openingHoursContainer">
+          <h2 class="hoursHeadre">Opening Hours</h2>
+          <p><strong>Monday to Friday</strong>
+          <aside>
+            8:00 Am - 8:30 Pm
+          </aside>
+          </p>
+          <p>
+            <strong>Sundays </strong>
+          <aside>
+            2:00 Pm - 7:30 Pm
+          </aside>
+          </p>
+        </div>
+      </div>
+      <!-- For the Social Media Icons -->
+      <div class="socilaMediaContacts">
+        <!-- LiinkedIn icon-->
+        <a href="http://www.linkedin.com/in/onyia-miracle-b582b4237/"><i class="fa-brands fa-linkedin-in"></i></a>
+        <!-- for facebook icon-->
+        <i class="fa-brands fa-facebook-f"></i>
+        <!-- for Instagram icon-->
+        <i class="fa-brands fa-instagram"></i>
+    
+      </div>
+</script>
+      </div>
+    </section>
+
+  </div>
+  <!-- Bootstrap Link Js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+  <!-- font-awsome Script -->
+  <script src="https://kit.fontawesome.com/9b5c4c6b23.js" crossorigin="anonymous"></script>
+
+  <!-- custom JS -->
+  <script src="script.js"></script>
+</body>
+
+</html>
